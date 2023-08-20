@@ -1,3 +1,16 @@
+# Deployed Link
+[Used gh-pages for deployment](https://ashutosh44ks.github.io/contact-management-app/contacts)
+
+## Tech stack used
+- React TS with Redux, React Query, and Tailwind CSS
+- Used Recharts and React-leaflet for charts and graphs
+
+## Features
+- Two part
+  1. CRUD features for contact management
+  2. Charts & Graphs showing covid-19 data using public REST API
+- Responsive site
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
