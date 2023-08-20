@@ -3,9 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const LeafletMap = () => {
+  // Define the type of data to be fetched
   type Country = [];
-  // Queries
-  const { isLoading, error, data, isFetching } = useQuery<Country, Error>({
+
+  // Fetch data from the API
+  const { isLoading, error, data } = useQuery<Country, Error>({
     queryKey: ["countries"],
     queryFn: async () => {
       let { data } = await axios.get(
@@ -14,12 +16,15 @@ const LeafletMap = () => {
       return data;
     },
   });
+
+  // Handle loading and error states
   if (isLoading) return <div>Loading leaflet data</div>;
   if (error)
     return (
       <div>An error has occurred loading leaflet data: {error.message}</div>
     );
-  //   if (isFetching) return <div>Background updating...</div>;
+
+  // Render the map
   return (
     <div>
       <MapContainer

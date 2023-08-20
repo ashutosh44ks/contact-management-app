@@ -3,12 +3,12 @@ import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import { removeContact } from "../../redux/contactsSlice";
 import { RiDeleteBinLine, RiEditLine } from "react-icons/ri";
 import { CiSquareAlert } from "react-icons/ci";
+import "./styles.css"
 
 const ManageContacts = () => {
   const navigate = useNavigate();
   const contacts = useAppSelector((state) => state.contacts);
   // or const contacts = useAppSelector(selectContacts);
-  console.log(contacts);
 
   const dispatch = useAppDispatch();
   return (

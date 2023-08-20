@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
 
+// Typescript types for slice
 export interface Contact {
   id: number;
   firstName: string;
@@ -8,8 +9,11 @@ export interface Contact {
   status: string;
 }
 
+// Used react-redux toolkit to create slice of store
 const contactsSlice = createSlice({
+  // Name of slice
   name: "contacts",
+  // Initial state for slice
   initialState: [
     {
       id: 1,
@@ -18,6 +22,8 @@ const contactsSlice = createSlice({
       status: "active",
     },
   ] as Contact[],
+  // Defined actions for slice
+  // Reducers take the current state and an action as arguments, and return a new state result
   reducers: {
     addContact(
       state,
@@ -67,15 +73,13 @@ const contactsSlice = createSlice({
       state[index].lastName = action.payload.lastName;
       state[index].status = action.payload.status;
     },
-    // todoToggled(state, action) {
-    //   const todo = state.find((todo) => todo.id === action.payload);
-    //   todo.completed = !todo.completed;
-    // },
   },
 });
 
+// Export actions from slice
 export const { addContact, removeContact, editContact } = contactsSlice.actions;
 
+// Export selector from slice
 export const selectContact = (state: RootState) => state.contacts;
 
 export default contactsSlice.reducer;

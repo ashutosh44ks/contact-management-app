@@ -11,6 +11,7 @@ const Sidebar = () => {
 
   return (
     <>
+      {/* Sibdebar for desktop view*/}
       <div className="sidebar">
         <h1 className="flex items-center gap-2">
           <img src={logo} alt="logo" height={30} width={30} /> Taiyo.ai
@@ -30,6 +31,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+      {/* Sibdebar for mobile view*/}
       <div className="sidebar-mobile">
         <div className="p-2 my-4">
           <img src={logo} alt="logo" height={30} width={30} />

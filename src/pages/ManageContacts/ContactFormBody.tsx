@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 
+// Props for ContactFormBody
 export interface formElementsProps {
   fName: string;
   setFName: Dispatch<SetStateAction<string>>;
@@ -9,6 +10,7 @@ export interface formElementsProps {
   setStatus: Dispatch<SetStateAction<string>>;
 }
 
+// Common form-body for adding and editing a contact
 const ContactFormBody = ({
   fName,
   setFName,

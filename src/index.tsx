@@ -10,8 +10,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-// Create a client
 const queryClient = new QueryClient();
+// Add providers of both react-query and redux to the root component
 root.render(
   <React.StrictMode>
     <Provider store={store}>

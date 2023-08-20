@@ -1,13 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../redux/hooks";
 import { addContact } from "../../redux/contactsSlice";
 import ContactFormBody from "./ContactFormBody";
 
+// Form for adding a new contact
 const ContactForm = () => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [status, setStatus] = useState("");
-  const dispatch = useAppDispatch();
 
   return (
     <div className="min-h-screen p-8 bg-[#f4f4f4]">
@@ -15,7 +19,6 @@ const ContactForm = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          console.log(fName, lName, status);
           dispatch(
             addContact({
               firstName: fName,
@@ -23,6 +26,7 @@ const ContactForm = () => {
               status: status,
             })
           );
+          navigate("/contact-management-app/contacts");
         }}
       >
         <ContactFormBody

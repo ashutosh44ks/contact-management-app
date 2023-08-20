@@ -4,15 +4,17 @@ import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 import { editContact } from "../../redux/contactsSlice";
 import ContactFormBody from "./ContactFormBody";
 
+// Form for editing an existing contact
 const ContactForm = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const contact = useAppSelector((state) => state.contacts);
 
+  const contact = useAppSelector((state) => state.contacts);
   const [fName, setFName] = useState("");
   const [lName, setLName] = useState("");
   const [status, setStatus] = useState("");
+  // Set the form values to the values of the contact to be edited
   useEffect(() => {
     if (contact.length !== 0 && id) {
       let myContact = contact.find((item) => item.id === +id);
@@ -38,7 +40,7 @@ const ContactForm = () => {
                 status: status,
               })
             );
-            navigate("/contacts");
+            navigate("/contact-management-app/contacts");
           }
         }}
       >

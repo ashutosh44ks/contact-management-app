@@ -13,12 +13,14 @@ import {
 } from "recharts";
 
 const LineGraph = () => {
+  // Define the type of data to be fetched
   type Cases = {
     cases: number;
     deaths: number;
     recovered: number;
   };
-  const { isLoading, error, data, isFetching } = useQuery<Cases, Error>({
+  // Fetch data from the API
+  const { isLoading, error, data } = useQuery<Cases, Error>({
     queryKey: ["covidCases"],
     queryFn: async () => {
       let { data } = await axios.get(
@@ -27,7 +29,10 @@ const LineGraph = () => {
       return data;
     },
   });
+
+  // Manipulating data for the chart
   const [chartData, setChartData] = useState<any>([]);
+  // Reduce data to make it more readable and faster
   const [reduceData, setReduceData] = useState<any>(true);
   useEffect(() => {
     console.log(data);
@@ -48,6 +53,7 @@ const LineGraph = () => {
     setChartData(output);
   }, [reduceData, data]);
 
+  // Set the aspect ratio of the chart (for imporving default responsiveness of recharts)
   const [aspect, setAspect] = useState(3);
   const setDimension = () => {
     if (window.innerWidth < 400) setAspect(1);
@@ -63,10 +69,11 @@ const LineGraph = () => {
     };
   }, [aspect]);
 
+  // Handle loading and error states
   if (isLoading) return <div>Loading data</div>;
   if (error) return <div>An error has occurred: {error.message}</div>;
-  //   if (isFetching) return <div>Background updating...</div>;
 
+  // Render the chart
   return (
     <div>
       <div className="flex flex-wrap justify-between items-center mb-4">

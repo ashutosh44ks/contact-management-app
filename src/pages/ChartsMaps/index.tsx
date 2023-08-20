@@ -1,9 +1,9 @@
 import LeafletMap from "./LeafletMap";
 import LineGraph from "./LineGraph";
 import OverallNumbers from "./OverallNumbers";
+import "./styles.css";
 
 const ChartsMaps = () => {
-
   return (
     <div className="min-h-screen p-8 bg-[#f4f4f4]">
       <div className="mb-4 bg-white rounded-lg p-4 border">

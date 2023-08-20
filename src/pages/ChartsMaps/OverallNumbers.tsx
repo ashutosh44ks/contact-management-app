@@ -2,21 +2,23 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const OverallNumbers = () => {
-    type CovidData = {
-        updated: number;
-        cases: number;
-        deaths: number;
-        recovered: number;
-        active: number;
-      };
-      // Queries
-      const { isLoading, error, data, isFetching } = useQuery<CovidData, Error>({
-        queryKey: ["covidData"],
-        queryFn: async () => {
-          let { data } = await axios.get("https://disease.sh/v3/covid-19/all");
-          return data;
-        },
-      });
+  // Define the type of data to be fetched
+  type CovidData = {
+    updated: number;
+    cases: number;
+    deaths: number;
+    recovered: number;
+    active: number;
+  };
+  // Fetch data from the API
+  const { isLoading, error, data } = useQuery<CovidData, Error>({
+    queryKey: ["covidData"],
+    queryFn: async () => {
+      let { data } = await axios.get("https://disease.sh/v3/covid-19/all");
+      return data;
+    },
+  });
+  // Display the data
   return (
     <div>
       {isLoading ? (

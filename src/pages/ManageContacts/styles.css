@@ -1,0 +1,34 @@
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+.contacts-grid .card {
+  border: solid 1px gainsboro;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  width: 15rem;
+}
+.contacts-grid .card p {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #0a0a0a;
+}
+.contact-form-body {
+  padding: 1rem;
+  border: solid 1px gainsboro;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+.form-group {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.form-group > label {
+  min-width: 5rem;
+}
