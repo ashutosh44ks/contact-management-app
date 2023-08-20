@@ -11,6 +11,16 @@
   2. Charts & Graphs showing covid-19 data using public REST API
 - Responsive site
 
+## API used
+- [Overall Cases](https://disease.sh/v3/covid-19/all)
+- [Country by Country data](https://disease.sh/v3/covid-19/countries)
+- [Data by date](https://disease.sh/v3/covid-19/historical/all?lastdays=all)
+
+## How to run locally
+1. Clone this repository using ```git clone https://github.com/ashutosh44ks/contact-management-app/```
+2. Install node_modules using ```npm i```
+3. Use the command ```npm start``` to host the project on localhost:3000
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
