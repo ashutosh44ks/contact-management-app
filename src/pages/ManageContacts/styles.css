@@ -10,7 +10,6 @@
   padding: 1rem;
   transition: all 0.3s ease-in-out;
   background-color: white;
-  width: 15rem;
 }
 .contacts-grid .card p {
   font-style: italic;
