@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/contact-management-app/static/css/main.0ebe9c9f.css",
-    "main.js": "/contact-management-app/static/js/main.fd3963c1.js",
+    "main.css": "/contact-management-app/static/css/main.80610bc9.css",
+    "main.js": "/contact-management-app/static/js/main.bb583fad.js",
     "static/js/787.cf6a4479.chunk.js": "/contact-management-app/static/js/787.cf6a4479.chunk.js",
     "index.html": "/contact-management-app/index.html",
-    "main.0ebe9c9f.css.map": "/contact-management-app/static/css/main.0ebe9c9f.css.map",
-    "main.fd3963c1.js.map": "/contact-management-app/static/js/main.fd3963c1.js.map",
+    "main.80610bc9.css.map": "/contact-management-app/static/css/main.80610bc9.css.map",
+    "main.bb583fad.js.map": "/contact-management-app/static/js/main.bb583fad.js.map",
     "787.cf6a4479.chunk.js.map": "/contact-management-app/static/js/787.cf6a4479.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ebe9c9f.css",
-    "static/js/main.fd3963c1.js"
+    "static/css/main.80610bc9.css",
+    "static/js/main.bb583fad.js"
   ]
 }
