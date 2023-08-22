@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "./store";
 
 // Typescript types for slice
-export interface Contact {
+interface Contact {
   id: number;
   firstName: string;
   lastName: string;

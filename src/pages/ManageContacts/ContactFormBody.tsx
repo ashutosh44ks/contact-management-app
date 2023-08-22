@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 // Props for ContactFormBody
-export interface formElementsProps {
+interface formElementsProps {
   fName: string;
   setFName: Dispatch<SetStateAction<string>>;
   lName: string;

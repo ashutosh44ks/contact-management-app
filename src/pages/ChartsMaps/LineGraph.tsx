@@ -35,7 +35,6 @@ const LineGraph = () => {
   // Reduce data to make it more readable and faster
   const [reduceData, setReduceData] = useState<any>(true);
   useEffect(() => {
-    console.log(data);
     if (!data) return;
     let cases: any = data.cases;
     let i = 0;

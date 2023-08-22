@@ -8,7 +8,7 @@ import "./styles.css"
 const ManageContacts = () => {
   const navigate = useNavigate();
   const contacts = useAppSelector((state) => state.contacts);
-  // or const contacts = useAppSelector(selectContacts);
+  // or const contacts = useAppSelector(selectContact);
 
   const dispatch = useAppDispatch();
   return (
